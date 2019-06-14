@@ -1,0 +1,33 @@
+{
+  "name": "@bahatron/env",
+  "version": "0.1.0",
+  "description": "A simple store for enviromental variables",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "mocha -b -r ts-node/register \"tests/**/*.mocha.ts\"",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahatron/env.git"
+  },
+  "keywords": [
+    "env"
+  ],
+  "author": "simonpiscitelli@gmail.com",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/bahatron/env/issues"
+  },
+  "homepage": "https://github.com/bahatron/env#readme",
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.0.7",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "ts-node": "^8.2.0",
+    "typescript": "^3.5.1"
+  }
+}
