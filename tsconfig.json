@@ -4,9 +4,11 @@
     ],
     "compilerOptions": {
         "strict": true,
+        "target": "es6",
         "outDir": "lib/",
         "sourceMap": true,
-        "target": "esnext",
-        "declaration": true
+        "declaration": true,
+        "removeComments": true,
+        "module": "umd"
     }
 }

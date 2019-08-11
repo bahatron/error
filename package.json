@@ -1,12 +1,13 @@
 {
-  "name": "@bahatron/env",
+  "name": "@bahatron/error",
   "version": "0.1.0",
   "description": "A simple store for enviromental variables",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "test": "mocha -b -r ts-node/register \"tests/**/*.mocha.ts\"",
-    "build": "tsc"
+    "dev": "npm run build && tsc --watch",
+    "build": "rm -rf lib && tsc"
   },
   "repository": {
     "type": "git",
