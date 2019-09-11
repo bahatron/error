@@ -27,11 +27,8 @@ const $error = {
         return new Exception("InternalError", message, 500, context);
     },
 
-    ValidationError(
-        message: string = "Validation Error",
-        context?: Context
-    ): Exception {
-        return new Exception("ValidationFailed", message, 400, context);
+    BadRequest(message: string = "Bad Request", context?: Context): Exception {
+        return new Exception("BadRequest", message, 400, context);
     },
 
     NotFound(message: string = "Resource not found"): Exception {
@@ -42,9 +39,14 @@ const $error = {
         return new Exception("Unauthorized", message, 401);
     },
 
-    Error(message: string, httpCode: HttpCode): Exception {
-        return new Exception("Error", message, httpCode);
-    }
+    Error(
+        name: string,
+        message: string,
+        httpCode: HttpCode,
+        context?: Context
+    ): Exception {
+        return new Exception(name, message, httpCode, context);
+    },
 };
 
 export default $error;
